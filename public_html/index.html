@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Schöffenverfahren | KVR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-red.min.css" />
+        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        <style>
+            .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+                padding-right: 0;
+            }
+
+            .vertical-text {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .material-icons.middle {
+                vertical-align: middle;
+                padding-right: 5px;
+            }
+
+            .material-icons.red500 {
+                color: #F44336;
+            }
+
+            .mdl-layout__content.padding {
+                padding: 35px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+            <header class="mdl-layout__header">
+                <!-- menue icon -->
+                <!--                <div class="mdl-layout-icon"></div>-->
+                <div class="mdl-layout__header-row">
+                    <!-- title -->
+                    <span class="mdl-layout__title" style="padding-right: 3em">Schöffenverfahren</span>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!--                            -->
+                        <input class="mdl-textfield__input" type="text" id="search_field">
+                        <label class="mdl-textfield__label" for="search_field">Schöffen suchen</label>
+                    </div>
+                    <div>
+                        <label class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">clear</i>
+                        </label>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- search -->
+                    <!--                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                                             mdl-textfield--floating-label mdl-textfield--align-right">
+                                            <label class="mdl-button mdl-js-button mdl-button--icon"
+                                                   for="waterfall-exp">
+                                                <i class="material-icons">search</i>
+                                            </label>
+                                            <div class="mdl-textfield__expandable-holder">
+                                                <input class="mdl-textfield__input" type="text" name="sample"
+                                                       id="waterfall-exp">
+                                            </div>
+                                        </div>-->
+                    <!-- apps -->
+                    <div>
+                        <button id="menu-app" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">apps</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-app">
+                            <li class="mdl-menu__item"><i class="material-icons middle">phone</i> Telefonbuch</li>
+                            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><i class="material-icons middle">access_time</i>Zeiterfassung</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">pets</i>DB Gefahrenabwehr</li>
+                        </ul>
+                    </div>
+                    <!-- user -->
+                    <div>
+                        <button id="menu-settings" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">settings</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-settings">
+                            <li class="mdl-menu__item"><i class="material-icons middle">bug_report</i>Fehler melden</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">face</i>Profil</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">info_outline</i>Info</li>
+                        </ul>
+                    </div>
+                    <!-- version -->
+                    <div>
+                        <span style="padding-left: 5px">| v1.4</span>
+                    </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title"><i class="material-icons middle">security</i>| KVR</span>
+                <nav class="mdl-navigation">
+                    <!--                    <a class="mdl-navigation__link" href="#"><i class="material-icons middle">home</i>Übersicht</a>-->
+                    <a class="mdl-navigation__link" href="#"><i class="material-icons middle">gavel</i>Schöffen</a>
+                    <a class="mdl-navigation__link" href="#"><i class="material-icons middle">hourglass_empty</i>Amtsperiode</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content padding">
+                <div class="page-content">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                <th>Anschrift</th>
+                                <th>Prozesse</th>
+                                <th>Amtsperioden</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Mickey Maus</td>
+                                <td>Hauptstr. 4, Entenhausen</td>
+                                <td>7</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Donald Duck</td>
+                                <td>Hauptstr. 6, Entenhausen</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Dorette Anette Liesette Duck</td>
+                                <td>Hauptstr. 17, Entenhausen</td>
+                                <td>11</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Franz Gans</td>
+                                <td>Hauptstr. 11, Entenhausen</td>
+                                <td>15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Primus von Quack</td>
+                                <td>Hauptstr. 34, Entenhausen</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Dussel Duck</td>
+                                <td>Hauptstr. 16, Entenhausen</td>
+                                <td>11</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Daniel Düsentrieb</td>
+                                <td>Hauptstr. 41, Entenhausen</td>
+                                <td>21</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Della Duck</td>
+                                <td>Hauptstr. 19, Entenhausen</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Hilmar Duck</td>
+                                <td>Hauptstr. 104, Entenhausen</td>
+                                <td>34</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Dortel Duck</td>
+                                <td>Hauptstr. 12, Entenhausen</td>
+                                <td>9</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Degenhard Duck</td>
+                                <td>Hauptstr. 12, Entenhausen</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Zacharias Zorngiebel</td>
+                                <td>Hauptstr. 5, Entenhausen</td>
+                                <td>11</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Baptist Brinksdink</td>
+                                <td>Hauptstr. 74, Entenhausen</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Daisy Duck</td>
+                                <td>Hauptstr. 12, Entenhausen</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+ 
+                        </tbody>
+                    </table>
+
+                </div>
+            </main>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    ...
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <span class="vertical-text">made in and for munich with <i class="material-icons red500" style="vertical-align: middle;">favorite</i></span>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
