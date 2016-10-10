@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+material design show case (claus.straube) 
+-->
+<html>
+    <head>
+        <title>Schöffenverfahren | KVR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-red.min.css" />
+        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        <style>
+            .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+                padding-right: 0;
+            }
+
+            .vertical-text {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .material-icons.middle {
+                vertical-align: middle;
+                padding-right: 5px;
+            }
+
+            .material-icons.red500 {
+                color: #F44336;
+            }
+
+            .mdl-layout__content.padding {
+                padding: 35px;
+            }
+
+            mdl-card--table__header{
+                height:64px
+            }
+
+
+            .demo-card-wide.mdl-card {
+                width: 85%;
+            }
+
+            .mdl-card__table, table{
+                width:100%;
+                margin:0em;
+            }
+
+            .form_layout{
+                padding: 20px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+            <header class="mdl-layout__header">
+                <!-- menue icon -->
+                <!--                <div class="mdl-layout-icon"></div>-->
+                <div class="mdl-layout__header-row">
+                    <!-- title -->
+                    <span class="mdl-layout__title" style="padding-right: 3em">Schöffenverfahren</span>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <!--                            -->
+                        <input class="mdl-textfield__input" type="text" id="search_field">
+                        <label class="mdl-textfield__label" for="search_field">Schöffen suchen</label>
+                    </div>
+                    <div>
+                        <label class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">search</i>
+                        </label>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- apps -->
+                    <div>
+                        <button id="menu-app" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">apps</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-app">
+                            <li class="mdl-menu__item"><i class="material-icons middle">phone</i> Telefonbuch</li>
+                            <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><i class="material-icons middle">access_time</i>Zeiterfassung</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">pets</i>DB Gefahrenabwehr</li>
+                        </ul>
+                    </div>
+                    <!-- user -->
+                    <div>
+                        <button id="menu-settings" class="mdl-button mdl-js-button mdl-button--icon">
+                            <i class="material-icons">settings</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-settings">
+                            <li class="mdl-menu__item"><i class="material-icons middle">bug_report</i>Fehler melden</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">face</i>Profil</li>
+                            <li class="mdl-menu__item"><i class="material-icons middle">info_outline</i>Info</li>
+                        </ul>
+                    </div>
+                    <!-- version -->
+                    <div>
+                        <span style="padding-left: 5px">| v1.4</span>
+                    </div>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title"><i class="material-icons middle">security</i>| KVR</span>
+                <nav class="mdl-navigation">
+                    <!--                    <a class="mdl-navigation__link" href="#"><i class="material-icons middle">home</i>Übersicht</a>-->
+                    <a class="mdl-navigation__link" href="index.html"><i class="material-icons middle">gavel</i>Schöffen</a>
+                    <a class="mdl-navigation__link" href="#"><i class="material-icons middle">hourglass_empty</i>Amtsperiode</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content padding">
+                <div class="page-content">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--table__header">
+                            <h2 class="mdl-card__title-text mdl-typography--title">Schöffen bearbeiten</h2>
+                        </div>
+                        <div>
+                            <form class="form_layout" action="#">
+                                <div class="mdl-grid">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="[a-z,A-Z, ]*" id="name" value="Mickey Mouse">
+                                        <label class="mdl-textfield__label" for="sample4">Name</label>
+                                        <span class="mdl-textfield__error">Die Eingabe darf nur Buchstaben und Leerzeichen enthalten!</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-grid">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--4-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="[a-z,A-Z,0-9, ,.]*" id="address" value="Hauptstr. 4, Entenhausen">
+                                        <label class="mdl-textfield__label" for="sample4">Adresse</label>
+                                        <span class="mdl-textfield__error">Die Eingabe darf nur Buchstaben, Zahlen und Leerzeichen enthalten!</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-grid">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--1-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="processes" value="7">
+                                        <label class="mdl-textfield__label" for="sample4">Prozesse</label>
+                                        <span class="mdl-textfield__error">Die Eingabe darf nur ganze Zahlen enthalten!</span>
+                                    </div>
+                                </div>
+                                <div class="mdl-grid">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--1-col">
+                                        <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="period" value="2">
+                                        <label class="mdl-textfield__label" for="sample4">Periode</label>
+                                        <span class="mdl-textfield__error">Die Eingabe darf nur ganze Zahlen enthalten!</span>
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a href="index.html" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                Speichern!
+                            </a>
+                            <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                                Abbrechen!
+                            </a>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">clear</i>
+                            </button>
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    ...
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <span class="vertical-text">made in and for munich with <i class="material-icons red500" style="vertical-align: middle;">favorite</i></span>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
