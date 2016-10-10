@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+material design show case (claus.straube) 
 -->
 <html>
     <head>
@@ -35,6 +33,21 @@ and open the template in the editor.
                 padding: 35px;
             }
 
+            mdl-card--table__header{
+                height:64px
+            }
+
+
+            .demo-card-wide.mdl-card {
+                width: 85%;
+            }
+
+            .mdl-card__table, table{
+                width:100%;
+                margin:0em;
+            }
+
+
         </style>
     </head>
     <body>
@@ -56,18 +69,6 @@ and open the template in the editor.
                         </label>
                     </div>
                     <div class="mdl-layout-spacer"></div>
-                    <!-- search -->
-                    <!--                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                                             mdl-textfield--floating-label mdl-textfield--align-right">
-                                            <label class="mdl-button mdl-js-button mdl-button--icon"
-                                                   for="waterfall-exp">
-                                                <i class="material-icons">search</i>
-                                            </label>
-                                            <div class="mdl-textfield__expandable-holder">
-                                                <input class="mdl-textfield__input" type="text" name="sample"
-                                                       id="waterfall-exp">
-                                            </div>
-                                        </div>-->
                     <!-- apps -->
                     <div>
                         <button id="menu-app" class="mdl-button mdl-js-button mdl-button--icon">
@@ -94,6 +95,7 @@ and open the template in the editor.
                     <div>
                         <span style="padding-left: 5px">| v1.4</span>
                     </div>
+                </div>
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title"><i class="material-icons middle">security</i>| KVR</span>
@@ -105,104 +107,122 @@ and open the template in the editor.
             </div>
             <main class="mdl-layout__content padding">
                 <div class="page-content">
-                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                        <thead>
-                            <tr>
-                                <th class="mdl-data-table__cell--non-numeric">Name</th>
-                                <th>Anschrift</th>
-                                <th>Prozesse</th>
-                                <th>Amtsperioden</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Mickey Maus</td>
-                                <td>Hauptstr. 4, Entenhausen</td>
-                                <td>7</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Donald Duck</td>
-                                <td>Hauptstr. 6, Entenhausen</td>
-                                <td>3</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Dorette Anette Liesette Duck</td>
-                                <td>Hauptstr. 17, Entenhausen</td>
-                                <td>11</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Franz Gans</td>
-                                <td>Hauptstr. 11, Entenhausen</td>
-                                <td>15</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Primus von Quack</td>
-                                <td>Hauptstr. 34, Entenhausen</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Dussel Duck</td>
-                                <td>Hauptstr. 16, Entenhausen</td>
-                                <td>11</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Daniel Düsentrieb</td>
-                                <td>Hauptstr. 41, Entenhausen</td>
-                                <td>21</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Della Duck</td>
-                                <td>Hauptstr. 19, Entenhausen</td>
-                                <td>3</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Hilmar Duck</td>
-                                <td>Hauptstr. 104, Entenhausen</td>
-                                <td>34</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Dortel Duck</td>
-                                <td>Hauptstr. 12, Entenhausen</td>
-                                <td>9</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Degenhard Duck</td>
-                                <td>Hauptstr. 12, Entenhausen</td>
-                                <td>3</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Zacharias Zorngiebel</td>
-                                <td>Hauptstr. 5, Entenhausen</td>
-                                <td>11</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Baptist Brinksdink</td>
-                                <td>Hauptstr. 74, Entenhausen</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td class="mdl-data-table__cell--non-numeric">Daisy Duck</td>
-                                <td>Hauptstr. 12, Entenhausen</td>
-                                <td>3</td>
-                                <td>1</td>
-                            </tr>
- 
-                        </tbody>
-                    </table>
+                    <!-- Wide card with share menu button -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--table__header">
+                            <h2 class="mdl-card__title-text mdl-typography--title">Suchergebnis</h2>
+                        </div>
+                        <div class="mdl-card__table">
+                            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable">
+                                <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric mdl-data-table__header--sorted-ascending">Name</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Anschrift</th>
+                                        <th class="mdl-data-table__header--sorted-ascending">Prozesse</th>
+                                        <th class="mdl-data-table__header--sorted-ascending">Amtsperioden</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Mickey Maus</td>
+                                        <td>Hauptstr. 4, Entenhausen</td>
+                                        <td>7</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Donald Duck</td>
+                                        <td>Hauptstr. 6, Entenhausen</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Dorette Anette Liesette Duck</td>
+                                        <td>Hauptstr. 17, Entenhausen</td>
+                                        <td>11</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Franz Gans</td>
+                                        <td>Hauptstr. 11, Entenhausen</td>
+                                        <td>15</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Primus von Quack</td>
+                                        <td>Hauptstr. 34, Entenhausen</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Dussel Duck</td>
+                                        <td>Hauptstr. 16, Entenhausen</td>
+                                        <td>11</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Daniel Düsentrieb</td>
+                                        <td>Hauptstr. 41, Entenhausen</td>
+                                        <td>21</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Della Duck</td>
+                                        <td>Hauptstr. 19, Entenhausen</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Hilmar Duck</td>
+                                        <td>Hauptstr. 104, Entenhausen</td>
+                                        <td>34</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Dortel Duck</td>
+                                        <td>Hauptstr. 12, Entenhausen</td>
+                                        <td>9</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Degenhard Duck</td>
+                                        <td>Hauptstr. 12, Entenhausen</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Zacharias Zorngiebel</td>
+                                        <td>Hauptstr. 5, Entenhausen</td>
+                                        <td>11</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Baptist Brinksdink</td>
+                                        <td>Hauptstr. 74, Entenhausen</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">Daisy Duck</td>
+                                        <td>Hauptstr. 12, Entenhausen</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                    </tr>
 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">add</i>
+                            </button>
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">mode_edit</i>
+                            </button>
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">delete_forever</i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </main>
             <footer class="mdl-mini-footer">
